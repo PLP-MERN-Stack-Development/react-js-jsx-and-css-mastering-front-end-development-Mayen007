@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import useTheme from "../context/useTheme";
+import Button from "./Button";
 
 /**
  * Navbar component for site navigation
@@ -8,6 +10,7 @@ import { Link, NavLink } from "react-router-dom";
  * @param {React.ReactNode} [props.children] - Additional content (optional)
  */
 const Navbar = ({ className = "", children }) => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <nav
       className={`bg-white dark:bg-gray-900 shadow px-4 py-3 flex items-center justify-between ${className}`.trim()}
@@ -43,6 +46,15 @@ const Navbar = ({ className = "", children }) => {
         >
           Tasks
         </NavLink>
+        <Button
+          variant="secondary"
+          size="sm"
+          className="ml-4"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
+        </Button>
       </div>
       {children && <div>{children}</div>}
     </nav>
