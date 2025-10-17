@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Custom hook for managing tasks with localStorage persistence
+ * Custom React hook for managing a list of tasks with localStorage persistence.
+ *
+ * @returns {object} { tasks, addTask, toggleTask, deleteTask }
+ * - tasks: Array of task objects
+ * - addTask: Function to add a new task
+ * - toggleTask: Function to toggle completion
+ * - deleteTask: Function to remove a task
  */
 const useLocalStorageTasks = () => {
   // Initialize state from localStorage or with empty array

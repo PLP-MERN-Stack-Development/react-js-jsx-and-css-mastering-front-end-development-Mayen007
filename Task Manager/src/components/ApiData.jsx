@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-// Phase 2: Add loading and error state handling
+/**
+ * ApiData component fetches and displays posts from a public API (JSONPlaceholder).
+ * Features:
+ * - Fetches data and displays in a grid layout
+ * - Loading and error states
+ * - Pagination
+ * - Search/filter functionality
+ * @returns {JSX.Element}
+ */
 const POSTS_PER_PAGE = 6;
 const ApiData = () => {
   const [data, setData] = useState([]);

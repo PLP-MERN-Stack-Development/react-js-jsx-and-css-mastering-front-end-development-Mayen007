@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /**
- * Card component for displaying content in a boxed layout
+ * Card component for displaying content in a boxed layout.
+ *
  * @param {object} props
  * @param {string} [props.className] - Additional classes
  * @param {React.ReactNode} props.children - Card content
- * @param {any} rest - Other div props
+ * @returns {JSX.Element}
  */
 const Card = ({ className = "", children, ...rest }) => {
   return (

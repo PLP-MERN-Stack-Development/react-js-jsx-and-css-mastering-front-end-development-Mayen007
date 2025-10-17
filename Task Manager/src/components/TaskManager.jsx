@@ -3,7 +3,12 @@ import Button from "./Button";
 import useLocalStorageTasks from "../hooks/useLocalStorage";
 
 /**
- * TaskManager component for managing tasks
+ * TaskManager component for managing a list of tasks.
+ * Features:
+ * - Add, complete, and delete tasks
+ * - Filter by all/active/completed
+ * - Persists tasks to localStorage using a custom hook
+ * @returns {JSX.Element}
  */
 const TaskManager = () => {
   const { tasks, addTask, toggleTask, deleteTask } = useLocalStorageTasks();

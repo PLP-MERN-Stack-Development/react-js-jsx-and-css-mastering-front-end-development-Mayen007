@@ -1,10 +1,12 @@
 import React from "react";
 
 /**
- * Footer component with links and copyright information
+ * Footer component with links and copyright information.
+ *
  * @param {object} props
  * @param {string} [props.className] - Additional classes
  * @param {React.ReactNode} [props.children] - Additional content (optional)
+ * @returns {JSX.Element}
  */
 const Footer = ({ className = "", children }) => {
   return (

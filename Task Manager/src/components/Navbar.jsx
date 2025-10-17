@@ -4,10 +4,12 @@ import useTheme from "../context/useTheme";
 import Button from "./Button";
 
 /**
- * Navbar component for site navigation
+ * Navbar component for site navigation and theme switching.
+ *
  * @param {object} props
  * @param {string} [props.className] - Additional classes
  * @param {React.ReactNode} [props.children] - Additional content (optional)
+ * @returns {JSX.Element}
  */
 const Navbar = ({ className = "", children }) => {
   const { theme, toggleTheme } = useTheme();

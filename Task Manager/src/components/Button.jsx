@@ -2,14 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /**
- * Button component with different variants
- * @param {Object} props - Component props
- * @param {string} props.variant - Button variant (primary, secondary, danger)
- * @param {string} props.size - Button size (sm, md, lg)
- * @param {boolean} props.disabled - Whether the button is disabled
- * @param {function} props.onClick - Click handler function
+ * Button component with different variants and sizes.
+ *
+ * @param {Object} props
+ * @param {string} [props.variant] - Button variant (primary, secondary, danger, success, warning)
+ * @param {string} [props.size] - Button size (sm, md, lg)
+ * @param {boolean} [props.disabled] - Whether the button is disabled
+ * @param {function} [props.onClick] - Click handler function
  * @param {React.ReactNode} props.children - Button content
- * @returns {JSX.Element} - Button component
+ * @param {string} [props.className] - Additional classes
+ * @returns {JSX.Element}
  */
 const Button = ({
   variant = "primary",
