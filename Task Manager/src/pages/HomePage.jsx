@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../components/Card";
 import Button from "../components/Button";
+import ApiData from "@/components/ApiData";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,10 @@ export default function HomePage() {
           GitHub
         </Button>
       </Card>
+      {/* Render API Data below the Card */}
+      <div className="w-full max-w-4xl mt-8">
+        <ApiData />
+      </div>
     </div>
   );
 }
