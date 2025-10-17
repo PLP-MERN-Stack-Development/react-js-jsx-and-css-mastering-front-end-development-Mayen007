@@ -1,65 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Button from './Button';
-
-/**
- * Custom hook for managing tasks with localStorage persistence
- */
-const useLocalStorageTasks = () => {
-  // Initialize state from localStorage or with empty array
-  const [tasks, setTasks] = useState(() => {
-    const savedTasks = localStorage.getItem('tasks');
-    return savedTasks ? JSON.parse(savedTasks) : [];
-  });
-
-  // Update localStorage when tasks change
-  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
-
-  // Add a new task
-  const addTask = (text) => {
-    if (text.trim()) {
-      setTasks([
-        ...tasks,
-        {
-          id: Date.now(),
-          text,
-          completed: false,
-          createdAt: new Date().toISOString(),
-        },
-      ]);
-    }
-  };
-
-  // Toggle task completion status
-  const toggleTask = (id) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
-  };
-
-  // Delete a task
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
-
-  return { tasks, addTask, toggleTask, deleteTask };
-};
+import React, { useState } from "react";
+import Button from "./Button";
+import useLocalStorageTasks from "../hooks/useLocalStorage";
 
 /**
  * TaskManager component for managing tasks
  */
 const TaskManager = () => {
   const { tasks, addTask, toggleTask, deleteTask } = useLocalStorageTasks();
-  const [newTaskText, setNewTaskText] = useState('');
-  const [filter, setFilter] = useState('all');
+  const [newTaskText, setNewTaskText] = useState("");
+  const [filter, setFilter] = useState("all");
 
   // Filter tasks based on selected filter
   const filteredTasks = tasks.filter((task) => {
-    if (filter === 'active') return !task.completed;
-    if (filter === 'completed') return task.completed;
+    if (filter === "active") return !task.completed;
+    if (filter === "completed") return task.completed;
     return true; // 'all' filter
   });
 
@@ -67,7 +21,7 @@ const TaskManager = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addTask(newTaskText);
-    setNewTaskText('');
+    setNewTaskText("");
   };
 
   return (
@@ -93,23 +47,23 @@ const TaskManager = () => {
       {/* Filter buttons */}
       <div className="flex gap-2 mb-4">
         <Button
-          variant={filter === 'all' ? 'primary' : 'secondary'}
+          variant={filter === "all" ? "primary" : "secondary"}
           size="sm"
-          onClick={() => setFilter('all')}
+          onClick={() => setFilter("all")}
         >
           All
         </Button>
         <Button
-          variant={filter === 'active' ? 'primary' : 'secondary'}
+          variant={filter === "active" ? "primary" : "secondary"}
           size="sm"
-          onClick={() => setFilter('active')}
+          onClick={() => setFilter("active")}
         >
           Active
         </Button>
         <Button
-          variant={filter === 'completed' ? 'primary' : 'secondary'}
+          variant={filter === "completed" ? "primary" : "secondary"}
           size="sm"
-          onClick={() => setFilter('completed')}
+          onClick={() => setFilter("completed")}
         >
           Completed
         </Button>
@@ -136,7 +90,9 @@ const TaskManager = () => {
                 />
                 <span
                   className={`${
-                    task.completed ? 'line-through text-gray-500 dark:text-gray-400' : ''
+                    task.completed
+                      ? "line-through text-gray-500 dark:text-gray-400"
+                      : ""
                   }`}
                 >
                   {task.text}
@@ -157,12 +113,10 @@ const TaskManager = () => {
 
       {/* Task stats */}
       <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-        <p>
-          {tasks.filter((task) => !task.completed).length} tasks remaining
-        </p>
+        <p>{tasks.filter((task) => !task.completed).length} tasks remaining</p>
       </div>
     </div>
   );
 };
 
-export default TaskManager; 
+export default TaskManager;

@@ -23,6 +23,7 @@ export default function HomePage() {
           href="https://github.com/Mayen007"
           target="_blank"
           rel="noopener noreferrer"
+          link={true}
         >
           GitHub
         </Button>
