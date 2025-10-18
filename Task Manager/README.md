@@ -4,7 +4,24 @@ A modern, responsive task management application built with React, Vite, and Tai
 
 ## 🚀 Live Demo
 
-🔗 **[View Live Application](#)** _(Add deployment URL here)_
+🔗 **[View Live Application](https://taskmanager-c44r.onrender.com/)** _(Add deployment URL here)_
+
+## 📸 Screenshots
+
+### Homepage - Light Mode
+
+![Task Manager Homepage](./screenshots/home-page.png)
+
+_The main landing page featuring the welcome card and API posts display with search and pagination functionality._
+
+
+### Task Manager Interface
+![Task Manager](./screenshots/tasks-page.png)
+
+### Mobile Responsive View
+![Mobile View](./screenshots/mobile-view.png)
+
+-->
 
 ## ✨ Features
 
@@ -57,7 +74,14 @@ Task Manager/
 ├── public/
 │   ├── logo.svg              # Application logo
 │   └── vite.svg              # Vite logo
+├── screenshots/              # Application screenshots
+│   ├── homepage-light.png    # Homepage in light mode
+│   ├── homepage-dark.png     # Homepage in dark mode (optional)
+│   ├── task-manager.png      # Task manager interface
+│   ├── mobile-view.png       # Mobile responsive view (optional)
+│   └── README.md             # Screenshots documentation
 ├── src/
+│   ├── api/                  # API integration functions (empty - ready for use)
 │   ├── assets/               # Static assets
 │   │   ├── logo.svg
 │   │   └── react.svg
@@ -65,7 +89,7 @@ Task Manager/
 │   │   ├── ApiData.jsx       # API data fetching and display
 │   │   ├── Button.jsx        # Reusable button with variants
 │   │   ├── Card.jsx          # Card container component
-│   │   ├── Footer.jsx        # Footer with links
+│   │   ├── Footer.jsx        # Footer with React Router links
 │   │   ├── Navbar.jsx        # Navigation bar with hamburger menu
 │   │   ├── TaskManager.jsx   # Task management component
 │   │   └── ThemeToggle.jsx   # Theme switcher component
@@ -76,6 +100,7 @@ Task Manager/
 │   │   └── useLocalStorage.js # Hook for localStorage persistence
 │   ├── pages/                # Page components
 │   │   └── HomePage.jsx      # Main landing page
+│   ├── utils/                # Utility functions (empty - ready for use)
 │   ├── App.css               # Application styles
 │   ├── App.jsx               # Main app component with routing
 │   ├── index.css             # Global styles and Tailwind imports
