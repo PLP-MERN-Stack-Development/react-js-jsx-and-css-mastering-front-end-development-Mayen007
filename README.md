@@ -1,70 +1,138 @@
-# React.js and Tailwind CSS Assignment
+# 📝 Task Manager - React & Tailwind CSS Project
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+> **Week 3 Assignment**: React.js, JSX, and Tailwind CSS – Mastering Front-End Development
 
-## Assignment Overview
+A modern, responsive task management application built with React 19, Vite 7, and Tailwind CSS 4. This project demonstrates component architecture, state management, custom hooks, API integration, and responsive design principles.
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+## 🚀 Live Demo
 
-## Getting Started
+🔗 **[View Live Application](https://taskmanager-c44r.onrender.com/)**
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+## 📸 Preview
 
-## Files Included
+![Task Manager Preview](./Task%20Manager/screenshots/home-page.png)
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
+## ✨ Key Features
 
-## Requirements
+- ✅ **Task Management** - Add, complete, delete, and filter tasks with localStorage persistence
+- 🌓 **Dark/Light Mode** - Theme toggle with system preference detection
+- 📱 **Fully Responsive** - Mobile-first design with hamburger menu
+- 🌐 **API Integration** - JSONPlaceholder posts with search and pagination
+- ⚛️ **Modern React** - Custom hooks, Context API, React Router v7
+- 🎨 **Tailwind CSS v4** - Utility-first styling with dark mode support
+
+## 📂 Project Structure
+
+```
+react-js-jsx-and-css-mastering-front-end-development-Mayen007/
+├── Task Manager/           # Main application folder
+│   ├── src/               # Source code
+│   │   ├── components/    # Reusable UI components
+│   │   ├── pages/         # Page components
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── context/       # React Context providers
+│   │   ├── api/           # API integration functions
+│   │   └── utils/         # Utility functions
+│   ├── screenshots/       # Application screenshots
+│   └── README.md          # Detailed project documentation
+├── Week3-Assignment.md    # Assignment requirements
+└── README.md              # This file
+```
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 - Node.js (v18 or higher)
 - npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
 
-## Project Structure
+### Installation
 
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/PLP-MERN-Stack-Development/react-js-jsx-and-css-mastering-front-end-development-Mayen007.git
+   cd react-js-jsx-and-css-mastering-front-end-development-Mayen007
+   ```
+
+2. **Navigate to the Task Manager folder**
+
+   ```bash
+   cd "Task Manager"
+   ```
+
+3. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   - Navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
 ```
-src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
-```
 
-## Submission
+## 🛠️ Technologies Used
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+| Technology      | Version | Purpose    |
+| --------------- | ------- | ---------- |
+| React           | 19.1.1  | UI library |
+| Vite            | 7.1.7   | Build tool |
+| Tailwind CSS    | 4.1.14  | Styling    |
+| React Router    | 7.9.4   | Routing    |
+| JSONPlaceholder | -       | Mock API   |
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+## 📋 Assignment Requirements
 
-## Resources
+This project fulfills all requirements from **Week 3: React.js, JSX, and Tailwind CSS** assignment:
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+- ✅ **Task 1**: Project setup with Vite, Tailwind CSS, and React Router
+- ✅ **Task 2**: Reusable component architecture (Button, Card, Navbar, Footer)
+- ✅ **Task 3**: State management with hooks (useState, useEffect, useContext, custom hooks)
+- ✅ **Task 4**: API integration with JSONPlaceholder (loading, error states, pagination, search)
+- ✅ **Task 5**: Responsive design with Tailwind CSS and theme switcher
+
+📄 **Full Requirements**: See [`Week3-Assignment.md`](./Week3-Assignment.md)
+
+## 📖 Documentation
+
+For detailed documentation, features, component descriptions, and setup instructions, see:
+
+👉 **[Task Manager/README.md](./Task%20Manager/README.md)**
+
+## 🎯 Project Highlights
+
+- **Custom Hooks**: `useLocalStorageTasks`, `useTheme`
+- **Context API**: Global theme management with localStorage persistence
+- **Component Composition**: Modular, reusable components
+- **Mobile-First Design**: Responsive hamburger menu and flexible layouts
+- **Dark Mode**: Tailwind v4 class-based dark mode with smooth transitions
+- **Type Safety**: PropTypes validation for component props
+
+## 👤 Author
+
+**Mayen007**
+
+- GitHub: [@Mayen007](https://github.com/Mayen007)
+
+## 🙏 Acknowledgments
+
+- PLP MERN Stack Development Program
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for the mock API
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first framework
+- [Vite](https://vitejs.dev/) for the blazing-fast build tool
+
+---
+
+**Built with ❤️ using React 19, Vite 7, and Tailwind CSS 4**

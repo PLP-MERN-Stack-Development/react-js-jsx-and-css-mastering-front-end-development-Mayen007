@@ -4,7 +4,7 @@ A modern, responsive task management application built with React, Vite, and Tai
 
 ## 🚀 Live Demo
 
-🔗 **[View Live Application](https://taskmanager-c44r.onrender.com/)** _(Add deployment URL here)_
+🔗 **[View Live Application](https://taskmanager-c44r.onrender.com/)**
 
 ## 📸 Screenshots
 
@@ -14,14 +14,13 @@ A modern, responsive task management application built with React, Vite, and Tai
 
 _The main landing page featuring the welcome card and API posts display with search and pagination functionality._
 
-
 ### Task Manager Interface
+
 ![Task Manager](./screenshots/tasks-page.png)
 
 ### Mobile Responsive View
-![Mobile View](./screenshots/mobile-view.png)
 
--->
+![Mobile View](./screenshots/mobile-view.png)
 
 ## ✨ Features
 
