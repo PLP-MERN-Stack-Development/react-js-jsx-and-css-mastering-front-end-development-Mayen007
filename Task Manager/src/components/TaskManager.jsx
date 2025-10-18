@@ -30,30 +30,33 @@ const TaskManager = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-      <h2 className="text-2xl font-bold mb-6">Task Manager</h2>
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-3 sm:p-6 w-full max-w-2xl mx-auto">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-gray-100">
+        Task Manager
+      </h2>
 
       {/* Task input form */}
-      <form onSubmit={handleSubmit} className="mb-6">
-        <div className="flex gap-2">
+      <form onSubmit={handleSubmit} className="mb-4 sm:mb-6">
+        <div className="flex flex-col sm:flex-row gap-2 w-full">
           <input
             type="text"
             value={newTaskText}
             onChange={(e) => setNewTaskText(e.target.value)}
             placeholder="Add a new task..."
-            className="flex-grow px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
+            className="w-full sm:flex-grow px-3 py-2 sm:px-4 sm:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 text-sm sm:text-base"
           />
-          <Button type="submit" variant="primary">
+          <Button type="submit" variant="primary" className="w-full sm:w-auto">
             Add Task
           </Button>
         </div>
       </form>
 
       {/* Filter buttons */}
-      <div className="flex gap-2 mb-4">
+      <div className="flex flex-col sm:flex-row gap-2 mb-2 sm:mb-4 w-full">
         <Button
           variant={filter === "all" ? "primary" : "secondary"}
           size="sm"
+          className="w-full sm:w-auto"
           onClick={() => setFilter("all")}
         >
           All
@@ -61,6 +64,7 @@ const TaskManager = () => {
         <Button
           variant={filter === "active" ? "primary" : "secondary"}
           size="sm"
+          className="w-full sm:w-auto"
           onClick={() => setFilter("active")}
         >
           Active
@@ -68,6 +72,7 @@ const TaskManager = () => {
         <Button
           variant={filter === "completed" ? "primary" : "secondary"}
           size="sm"
+          className="w-full sm:w-auto"
           onClick={() => setFilter("completed")}
         >
           Completed
@@ -84,9 +89,9 @@ const TaskManager = () => {
           filteredTasks.map((task) => (
             <li
               key={task.id}
-              className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:border-gray-700"
+              className="flex flex-col sm:flex-row items-center justify-between p-2 sm:p-3 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:border-gray-700"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3 w-full">
                 <input
                   type="checkbox"
                   checked={task.completed}
@@ -97,7 +102,7 @@ const TaskManager = () => {
                   className={`${
                     task.completed
                       ? "line-through text-gray-500 dark:text-gray-400"
-                      : ""
+                      : "text-gray-900 dark:text-gray-100"
                   }`}
                 >
                   {task.text}
@@ -106,6 +111,7 @@ const TaskManager = () => {
               <Button
                 variant="danger"
                 size="sm"
+                className="w-full sm:w-auto mt-2 sm:mt-0"
                 onClick={() => deleteTask(task.id)}
                 aria-label="Delete task"
               >
@@ -117,7 +123,7 @@ const TaskManager = () => {
       </ul>
 
       {/* Task stats */}
-      <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+      <div className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
         <p>{tasks.filter((task) => !task.completed).length} tasks remaining</p>
       </div>
     </div>

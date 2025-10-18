@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+/* Tailwind v4 Dark Mode Configuration */
+:root {
+  /* Default color scheme variables */
+  --color-scheme: light;
+  --color-scheme-dark: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.dark,
+:root.dark,
+html.dark {
+  color-scheme: dark;
+}
+
+/* Ensure smooth theme transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Prevent transition on page load */
+.preload * {
+  transition: none !important;
+}
+
+/* Body background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(249 250 251);
+  /* gray-50 */
+}
+
+html.dark body {
+  background-color: rgb(17 24 39);
+  /* gray-900 */
+  color: rgb(229 231 235);
+  /* gray-200 */
+}
